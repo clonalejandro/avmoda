@@ -30,9 +30,9 @@ class WebVieu(protocol: String, url: String, webView: WebView) {
 
     /** SMALL CONSTRUCTORS **/
 
-    var protocol: String by Delegates.notNull()
-    var url: String by Delegates.notNull()
-    var webView: WebView by Delegates.notNull()
+    private var protocol: String by Delegates.notNull()
+    private var url: String by Delegates.notNull()
+    private var webView: WebView by Delegates.notNull()
 
     init {
         this.protocol = protocol

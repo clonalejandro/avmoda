@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/splash_layout"
+    android:paddingTop="@dimen/home_vertical_margin"
+    android:paddingBottom="@dimen/splash_bottom"
+    android:paddingLeft="@dimen/home_horizontal_margin"
+    android:paddingRight="@dimen/home_horizontal_margin"
+    android:background="@drawable/gradients"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>
