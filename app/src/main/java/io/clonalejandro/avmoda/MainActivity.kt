@@ -2,7 +2,9 @@ package io.clonalejandro.avmoda
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+
 import io.clonalejandro.avmoda.utils.WebVieu
+
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        WebVieu("https", "twitter.com", webview)
+        WebVieu("https://shop.spreadshirt.es/avmoda", webview)
     }
 
 

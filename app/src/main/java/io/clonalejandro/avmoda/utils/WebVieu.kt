@@ -25,17 +25,15 @@ import kotlin.properties.Delegates
  * All rights reserved for clonalejandro ©AVModa 2017 / 2018
  */
 
-class WebVieu(protocol: String, url: String, webView: WebView) {
+class WebVieu(url: String, webView: WebView) {
 
 
     /** SMALL CONSTRUCTORS **/
 
-    private var protocol: String by Delegates.notNull()
     private var url: String by Delegates.notNull()
     private var webView: WebView by Delegates.notNull()
 
     init {
-        this.protocol = protocol
         this.url = url
         this.webView = webView
 
@@ -55,18 +53,6 @@ class WebVieu(protocol: String, url: String, webView: WebView) {
 
 
     /** OTHERS **/
-
-    /**
-     * This function build the url with the network protocol
-     * @throws UnsupportedOperationException
-     */
-    @Throws (UnsupportedOperationException::class)
-    private fun buildUrl() : String {
-        val builder = Uri.Builder()
-        builder.scheme(protocol).authority(url)
-        return builder.build().toString()
-    }
-
 
     /**
      * This function build the WebView class with the configurations
@@ -95,7 +81,7 @@ class WebVieu(protocol: String, url: String, webView: WebView) {
     private fun loadWeb(){
         try {
             buildWebView()
-            webView.loadUrl( buildUrl() )
+            webView.loadUrl( this.url )
         }
         catch (e : UnsupportedOperationException){ e.printStackTrace() }
     }

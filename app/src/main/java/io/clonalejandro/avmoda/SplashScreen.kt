@@ -1,16 +1,11 @@
 package io.clonalejandro.avmoda
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.drawable.AnimationDrawable
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import io.clonalejandro.avmoda.R.id.splash_layout
-import io.clonalejandro.avmoda.animations.SplashAnimation
+import android.support.v7.app.AppCompatActivity
 
+import io.clonalejandro.avmoda.animations.SplashAnimation
 import io.clonalejandro.avmoda.tasks.SplashTask
-import org.jetbrains.annotations.NotNull
 
 /**
  * Created by alejandrorioscalera
