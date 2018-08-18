@@ -2,6 +2,7 @@ package io.clonalejandro.avmoda
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
 
 import io.clonalejandro.avmoda.utils.WebVieu
 
@@ -32,6 +33,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         WebVieu("https://shop.spreadshirt.es/avmoda", webview)
+    }
+
+
+    /**
+     * This function return last page while you press back button
+     */
+    override fun onBackPressed() {
+        if ( webview.canGoBack() ) webview.goBack()
+        else super.onBackPressed()
     }
 
 
